@@ -51,6 +51,17 @@ sampleData.forEach((info) => {
 });
 
 
+function selectDate(date) {
+	return  date.datetime === "1/1/2010";
+  }
+  
+  // filter() uses the custom function as its argument
+var selectedDate = data.filter(selectDate);
+  
+console.log(selectedDate);
+
+
+
 var button = d3.select("#filter-btn");
 
 // Select the form
@@ -66,8 +77,35 @@ function runEnter() {
   // Prevent the page from refreshing
 	d3.event.preventDefault();
 
-	console.log('hi world')
+	// Select the input element and get the raw HTML node
+	var inputElement = d3.select("#example-form-input");
+
+  // Get the value property of the input element
+  	var inputValue = inputElement.property("value");
+
+  // Print the value to the console
+//   console.log(inputValue);
+
+function selectDate(date) {
+	return  date.datetime === inputValue;
+  }
   
+  // filter() uses the custom function as its argument
+var selectedDate = data.filter(selectDate);
+  
+console.log(selectedDate);
+
 }
+
+
+function selectDate(date) {
+	return  date.datetime ==="1/1/2010";
+  }
+  
+  // filter() uses the custom function as its argument
+  var selectedDate = data.filter(selectDate);
+  
+  console.log(selectedDate);
+
 
 
