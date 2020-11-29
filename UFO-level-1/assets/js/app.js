@@ -78,17 +78,17 @@ function runEnter() {
 	d3.event.preventDefault();
 
 	// Select the input element and get the raw HTML node
-	var inputElement = d3.select("#example-form-input");
+	var inputElement = d3.select("#datetime");
 
   // Get the value property of the input element
   	var inputValue = inputElement.property("value");
 
-  // Print the value to the console
-//   console.log(inputValue);
+//   Print the value to the console
+    console.log(inputValue);
 
-function selectDate(date) {
-	return  date.datetime === inputValue;
-  }
+	function selectDate(date) {
+		return  date.datetime === inputValue;
+	  }
   
   // filter() uses the custom function as its argument
 var selectedDate = data.filter(selectDate);
