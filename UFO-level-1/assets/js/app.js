@@ -18,16 +18,7 @@ tableData.forEach((info) => {
 
 
 // YOUR CODE HERE!
-
-// sampleData.forEach((info) => {
-
-// 	var row = tableBody.append('tr');
-
-// 	Object.entries(info).forEach(([key, value]) => {
-// 		row.append('td').text(value);
-// 	});
-// });
-
+// testing, see pages for logic
 
 
 
@@ -49,3 +40,34 @@ var sampleData = [{
     durationMinutes: "13 minutes",
     comments: "Three bright red lights witnessed floating stationary over San Diego New Years Day 2010"
   }]
+
+sampleData.forEach((info) => {
+
+	var row = tableBody.append('tr');
+
+	Object.entries(info).forEach(([key, value]) => {
+		row.append('td').text(value);
+	});
+});
+
+
+var button = d3.select("#filter-btn");
+
+// Select the form
+var form = d3.select("#form");
+
+  
+button.on("click", runEnter);
+form.on("submit", runEnter);
+
+// Create the function to run for both events
+function runEnter() {
+
+  // Prevent the page from refreshing
+	d3.event.preventDefault();
+
+	console.log('hi world')
+  
+}
+
+
