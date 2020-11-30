@@ -16,6 +16,9 @@ var data = [{
     comments: "4 bright green circles high in the sky going in circles then one bright green light at my front door."
   },
 ...
-and so on
+in a repeating fashion (114 of them)
 ```
+
+In the first folder, *UFO-level-1*, it contains the index.html file that can be loaded to view the example.  This code was completed using d3.  In */assets/js/app.js* there you will find the code that powers the selection and filtering.  
+
 
