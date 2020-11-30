@@ -19,6 +19,37 @@ var data = [{
 in a repeating fashion (114 of them)
 ```
 
-In the first folder, *UFO-level-1*, it contains the index.html file that can be loaded to view the example.  This code was completed using d3.  In */assets/js/app.js* there you will find the code that powers the selection and filtering.  
+In the first folder, *UFO-level-1*, it contains the index.html file that can be loaded to view the example.  This code was completed using d3.  In */assets/js/app.js* there you will find the code that powers the selection and filtering.  The elements of the table in the index.html were selected and then populated using a for loop in the forEach format. 
 
+```javascript
+tableData.forEach((info) => {
 
+	var row = tableBody.append('tr');
+
+	Object.entries(info).forEach(([key, value]) => {
+		row.append('td').text(value);
+	});
+});
+```
+
+Then an eventlistener was used:
+```javascript
+
+  
+button.on("click", runEnter);
+form.on("submit", runEnter);
+
+```
+Whenever the form is submitted with a date, then the eventlistener will run the function runEnter, which will filter the Javascript object depending on what was submitted in the input. 
+
+```javascript 
+// the filter function 
+
+	function selectDate(date) {
+		return  date.datetime === inputValue;
+	  }
+  
+	var selectedDate = data.filter(selectDate);
+```
+
+After the Javascript is filtered it is stored in the variable `selectedDate`
