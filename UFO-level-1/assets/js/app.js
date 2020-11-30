@@ -91,8 +91,28 @@ function runEnter() {
 	  }
   
   // filter() uses the custom function as its argument
-var selectedDate = data.filter(selectDate);
-  
+	var selectedDate = data.filter(selectDate);
+ 
+	// for sure now need to delete the rows
+	// and then, add it back again
+
+	d3.select("#ufo-table tbody").remove()
+	console.log(selectedDate);
+	console.log('printing..')
+
+	var table_2 = d3.select("table")
+	var tbody_2 = table_2.append("tbody")
+	
+
+	selectedDate.forEach((info) => {
+
+		var row = tbody_2.append('tr');
+
+		Object.entries(info).forEach(([key, value]) => {
+			row.append('td').text(value);
+	});
+});
+	
 console.log(selectedDate);
 
 }
