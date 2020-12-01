@@ -19,7 +19,7 @@ var data = [{
 in a repeating fashion (114 of them)
 ```
 
-In the first folder, *UFO-level-1*, it contains the index.html file that can be loaded to view the example.  This code was completed using d3.  In */assets/js/app.js* there you will find the code that powers the selection and filtering.  The elements of the table in the index.html were selected and then populated using a for loop in the forEach format. 
+In the first folder, **UFO-level-1**, it contains the index.html file that can be loaded to view the example.  This code was completed using d3.  In **/assets/js/app.js** there you will find the code that powers the selection and filtering.  The elements of the table in the index.html were selected and then populated using a for loop in the forEach format. 
 
 ```javascript
 tableData.forEach((info) => {
@@ -56,7 +56,7 @@ After the Javascript is filtered it is stored in the variable `selectedDate`, wh
 
 # Bonus
 
-For the bonus, the same method was used as above, but it was expanded to include one more variable.  The bonus can be found in the folder *UFO-level-2* .
+For the bonus, the same method was used as above, but it was expanded to include one more variable.  The bonus can be found in the folder **UFO-level-2** .
 
 Radio buttons were required to be added and it looks like this :
 ```html
